@@ -1,0 +1,21 @@
+package com.luv2code.ecommerce.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.luv2code.ecommerce.entity.Product;
+import com.luv2code.ecommerce.repository.ProductRepository;
+
+@Service
+//@Transactional
+public class ProductServiceImpl implements ProductService {
+
+	private ProductRepository productRepository;
+	@Override
+	public List<Product> findAll() {
+		return productRepository.findAll();
+	}
+
+}
